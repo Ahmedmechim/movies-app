@@ -1,0 +1,28 @@
+.lista{
+    display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.film{
+    margin-top: 10px;
+margin-bottom: 10px;
+}
+.cont{
+    background-color: brown;
+}
+.addForm{
+    display: flex;
+
+    flex-direction:column;
+}
+.navbare{
+    margin: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(129, 62, 62);
+}
+.navbare input{
+    margin-left: 500px;
+    margin-right: 150px;
+}
