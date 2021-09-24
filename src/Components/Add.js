@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import './style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Add = ({AddMovie}) => {
@@ -15,7 +16,7 @@ const Add = ({AddMovie}) => {
     },
   };
   Modal.setAppElement("#root");
-  let subtitle;
+  // let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -53,7 +54,7 @@ const adding=(e)=>{
 
   return (
     <div>
-      <button onClick={openModal}>Add</button>
+      <button className="btnAdd" onClick={openModal}>Add</button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

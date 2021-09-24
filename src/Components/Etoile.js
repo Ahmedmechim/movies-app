@@ -1,32 +1,34 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
+// import React, { useState } from "react";value
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
+import Typography from "@mui/material/Typography";
 
-export default function BasicRating({filter}) {
-  const [value, setValue] = React.useState(null);
-  console.log(value);
+export default function BasicRating({ value, setValue }) {
+  // const [value, setValue] = useState(0);
+  
+console.log(value)
   return (
-    <div>
-      <button onClick={()=>filter(value)}>filter</button>
-<Box
-    //   sx={{
-    //     '& > legend': { mt: 2 },
-    //   }}
-    >
-      <Typography component="legend"></Typography>
-      <Rating
-        name="simple-controlled"
-        value={value}
-        
-        onChange={(event, newValue) => {
-          setValue(newValue);
+    <div className="filt">
+      {/* <button onClick={() => filter(value)}>filter</button> */}
+      <div>
+        <Box
+        //   sx={{
+        //     '& > legend': { mt: 2 },
+        //   }}
+        >
+          <Typography component="legend"></Typography>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            // onClick={() => {filter(value); }}
+            onChange={(event, newValue) => {
+              setValue(newValue); 
+              // filter(value)
+            }}
           
-        }}
-        
-      />
-    </Box>
+          />
+        </Box>
+      </div>
     </div>
-    
   );
 }
