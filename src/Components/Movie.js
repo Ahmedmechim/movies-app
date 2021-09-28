@@ -24,6 +24,7 @@ const Movie = ({ movie }) => {
         />
         <CardContent>
           <Typography
+        
             className="title"
             gutterBottom
             variant="h5"

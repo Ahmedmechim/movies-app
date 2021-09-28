@@ -73,7 +73,7 @@ const adding=(e)=>{
           onChange={onChangeDescription}  
           />
           <label>posterURL:</label>
-          <input type="text" 
+          <input type="url" 
           value={handelURL} 
           onChange={onChangeURL}  
           />

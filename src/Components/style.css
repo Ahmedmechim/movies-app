@@ -59,6 +59,9 @@ position: relative;
 }
 .title {
   font-size: 10px;
+  text-decoration: underline  white;
+  color: black;
+ 
 }
 /* .filt{
     display: flex;
@@ -78,8 +81,13 @@ body {
   background-color: rgb(83, 13, 13);
 align-items: center;
 }
+.navibarre h3{
+  color: white;
+  margin-left: 30px;
+  text-decoration: underline  rgb(83, 13, 13);
+}
 .navibarre i{
-margin-left: 300px;
+margin-left: 200px;
 }
 .navibarre input{
     margin-right: 600px;
@@ -98,4 +106,35 @@ margin-left: 300px;
 }
 .liste{
     
+}
+.discriptionFilm{
+position: relative;
+}
+.discriptionFilm h3{
+  position:absolute;
+  left: 550px;
+  top: 50px;
+  color: white;
+}
+.discriptionFilm img{
+  width: 220px;
+  height: 300px;
+  position: absolute;
+  left: 280px;
+  top: 50px;
+}
+.discriptionFilm .nejma{
+  position:absolute;
+  left: 530px;
+  top: 80px;
+}
+.discriptionFilm p{
+  position:absolute;
+  left: 530px;
+  top: 120px;
+  width: 500px;
+  text-align: left;
+}
+.discriptionFilm .trailer{
+  padding-top: 380px;
 }

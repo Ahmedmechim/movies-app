@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import Add from "./Add";
 import { Movies } from "./Donnes";
 import BasicRating from "./Etoile";
@@ -32,16 +32,19 @@ const Container = () => {
   return (
     <div>
       <div className="cont">
-        <div className="navibarre">
-          <i class="fas fa-search"></i>
-          <input type="text" value={handelput} onChange={onChangeinput} />
-          <BasicRating value={value} setValue={setValue} />
-        </div>
         <BrowserRouter>
+          <div className="navibarre">
+            <Link to="/">
+              <h3>HOME</h3>
+            </Link>
+            <i class="fas fa-search"></i>
+            <input type="text" value={handelput} onChange={onChangeinput} />
+            <BasicRating value={value} setValue={setValue} />
+          </div>
           <Switch>
             <Route
               path="/discreption/:id"
-              render={(props) => <Discreption {...props} movies={movies}   />}
+              render={(props) => <Discreption {...props} movies={movies} />}
             />
             <Route
               path="/"
@@ -49,7 +52,7 @@ const Container = () => {
                 <div>
                   <div className="liste">
                     {!value && handelput === "" ? <Faza /> : <span></span>}
-                    <MoviesList 
+                    <MoviesList
                       movies={
                         !value
                           ? movies.filter((el) =>
